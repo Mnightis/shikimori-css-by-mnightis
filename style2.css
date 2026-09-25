@@ -179,60 +179,58 @@ header.head h1 {
 .b-nothing_here {
     color: aqua;
 }
-
 /* ============================================
-   ПЕРЕИМЕНОВАНИЕ БЛОКОВ
+   ПЕРЕИМЕНОВАНИЕ БЛОКОВ (правильные селекторы)
    ============================================ */
 
-/* Друзья -> Кореша */
-a[href*="/friends"] .subheadline,
-a[href*="/friends"] .midheadline,
-a[href*="/friends"] .headline {
+/* Друзья -> Кореша (везде) */
+.subheadline > a[href$="/friends"],
+.subheadline > a[href*="/friends"],
+.midheadline > a[href*="/friends"],
+.headline > a[href*="/friends"] {
     font-size: 0 !important;
 }
-a[href*="/friends"] .subheadline::after,
-a[href*="/friends"] .midheadline::after,
-a[href*="/friends"] .headline::after {
-    content: "Кореша";
-    font-size: 15px;
-    color: inherit;
-    font-weight: bold;
+.subheadline > a[href$="/friends"]::after,
+.subheadline > a[href*="/friends"]::after,
+.midheadline > a[href*="/friends"]::after,
+.headline > a[href*="/friends"]::after {
+    content: "Кореша" !important;
+    font-size: 15px !important;
+    color: inherit !important;
+    font-weight: bold !important;
 }
 
-/* Клубы -> Тусовки */
-a[href*="/clubs"] .subheadline,
-a[href*="/clubs"] .midheadline,
-a[href*="/clubs"] .headline {
+/* Клубы -> Тусовки (везде) */
+.subheadline > a[href$="/clubs"],
+.subheadline > a[href*="/clubs"],
+.midheadline > a[href*="/clubs"],
+.headline > a[href*="/clubs"] {
     font-size: 0 !important;
 }
-a[href*="/clubs"] .subheadline::after,
-a[href*="/clubs"] .midheadline::after,
-a[href*="/clubs"] .headline::after {
-    content: "Тусовки";
-    font-size: 15px;
-    color: inherit;
-    font-weight: bold;
-}
-/* Страница Клубов */
-#profiles_clubs .subheadline { font-size: 0 !important; }
-#profiles_clubs .subheadline::after {
-    content: "Тусовки"; font-size: 15px; color: inherit; font-weight: bold;
+.subheadline > a[href$="/clubs"]::after,
+.subheadline > a[href*="/clubs"]::after,
+.midheadline > a[href*="/clubs"]::after,
+.headline > a[href*="/clubs"]::after {
+    content: "Тусовки" !important;
+    font-size: 15px !important;
+    color: inherit !important;
+    font-weight: bold !important;
 }
 
-/* Страница Друзей */
-#profiles_friends .subheadline { font-size: 0 !important; }
-#profiles_friends .subheadline::after {
-    content: "Кореша"; font-size: 15px; color: inherit; font-weight: bold;
+/* Страницы /clubs и /friends (там заголовок без ссылки) */
+body#profiles_clubs .subheadline,
+body#profiles_friends .subheadline {
+    font-size: 0 !important;
 }
-
-/* Профиль: Друзья (первая колонка) */
-#profiles_show .cc-2a .c-column:first-child .subheadline { font-size: 0 !important; }
-#profiles_show .cc-2a .c-column:first-child .subheadline::after {
-    content: "Кореша"; font-size: 15px; color: inherit; font-weight: bold;
+body#profiles_clubs .subheadline::after {
+    content: "Тусовки" !important;
+    font-size: 15px !important;
+    color: inherit !important;
+    font-weight: bold !important;
 }
-
-/* Профиль: Клубы (вторая колонка, ссылка внутри) */
-#profiles_show .cc-2a .c-column:nth-child(2) .subheadline > a { font-size: 0 !important; }
-#profiles_show .cc-2a .c-column:nth-child(2) .subheadline > a::after {
-    content: "Тусовки"; font-size: 15px; color: inherit; font-weight: bold;
+body#profiles_friends .subheadline::after {
+    content: "Кореша" !important;
+    font-size: 15px !important;
+    color: inherit !important;
+    font-weight: bold !important;
 }
