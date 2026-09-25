@@ -40,7 +40,8 @@ a:visited {
 .profile-content .subheadline > a[href$="/favorites"]::after {
     content: var(--profile-favorites-title, "Любимое аниме") !important;
     vertical-align: top;
-    font-size: 13px;
+    font-size: 13px !important;
+    line-height: 1 !important;
     padding-right: 0;
 }
 .profile-content .subheadline > a[href$="/favorites"] {
@@ -192,15 +193,19 @@ header.head h1 {
 }
 
 /* ==== ЗНАЧЕНИЕ ВРЕМЕНИ -> НЕТ ЛИЧНОГО ВРЕМЕНИ ==== */
+.lifetime .title,
 .lifetime .value {
     font-size: 0 !important;
+    line-height: 1 !important;
 }
 .lifetime .value::after {
     content: "НЕТ ЛИЧНОГО ВРЕМЕНИ" !important;
     font-size: 12px !important;
+    line-height: 1.2 !important;
     color: inherit !important;
     font-weight: bold !important;
     white-space: nowrap;
+    display: inline-block;
 }
 
 /* ==== ПЕРЕИМЕНОВАНИЕ: ДРУЗЬЯ -> КОРЕША, КЛУБЫ -> ТУСОВКИ ==== */
@@ -208,43 +213,55 @@ header.head h1 {
 /* Профиль: Друзья */
 #profiles_show .cc-2a .c-column:nth-child(1) .subheadline {
     font-size: 0 !important;
+    line-height: 1 !important;
 }
 #profiles_show .cc-2a .c-column:nth-child(1) .subheadline::after {
     content: "Кореша" !important;
     font-size: 13px !important;
+    line-height: 1.2 !important;
     color: inherit !important;
     font-weight: bold !important;
+    display: inline-block;
 }
 
 /* Профиль: Клубы */
 #profiles_show .cc-2a .c-column:nth-child(2) .subheadline {
     font-size: 0 !important;
+    line-height: 1 !important;
 }
 #profiles_show .cc-2a .c-column:nth-child(2) .subheadline::after {
     content: "Тусовки" !important;
     font-size: 13px !important;
+    line-height: 1.2 !important;
     color: inherit !important;
     font-weight: bold !important;
+    display: inline-block;
 }
 
 /* Страница /MNIGHTIS/friends */
 body#profiles_friends .subheadline {
     font-size: 0 !important;
+    line-height: 1 !important;
 }
 body#profiles_friends .subheadline::after {
     content: "Кореша" !important;
     font-size: 13px !important;
+    line-height: 1.2 !important;
     color: inherit !important;
     font-weight: bold !important;
+    display: inline-block;
 }
 
 /* Страница /MNIGHTIS/clubs */
 body#profiles_clubs .subheadline {
     font-size: 0 !important;
+    line-height: 1 !important;
 }
 body#profiles_clubs .subheadline::after {
     content: "Тусовки" !important;
     font-size: 13px !important;
+    line-height: 1.2 !important;
     color: inherit !important;
     font-weight: bold !important;
+    display: inline-block;
 }
