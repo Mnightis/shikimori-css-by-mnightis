@@ -1,0 +1,47 @@
+/* ============================================
+   ПЕРЕИМЕНОВАНИЕ: ДРУЗЬЯ -> КОРЕША, КЛУБЫ -> ТУСОВКИ
+   ============================================ */
+
+/* --- Профиль: Друзья (первая колонка, там нет ссылки) --- */
+#profiles_show .cc-2a .c-column:nth-child(1) .subheadline {
+    font-size: 0 !important;
+}
+#profiles_show .cc-2a .c-column:nth-child(1) .subheadline::after {
+    content: "Кореша" !important;
+    font-size: 15px !important;
+    color: inherit !important;
+    font-weight: bold !important;
+}
+
+/* --- Профиль: Клубы (вторая колонка, ссылка внутри) --- */
+#profiles_show .cc-2a .c-column:nth-child(2) .subheadline {
+    font-size: 0 !important;
+}
+#profiles_show .cc-2a .c-column:nth-child(2) .subheadline::after {
+    content: "Тусовки" !important;
+    font-size: 15px !important;
+    color: inherit !important;
+    font-weight: bold !important;
+}
+
+/* --- Страница /MNIGHTIS/friends (отдельная вкладка) --- */
+body#profiles_friends .subheadline {
+    font-size: 0 !important;
+}
+body#profiles_friends .subheadline::after {
+    content: "Кореша" !important;
+    font-size: 15px !important;
+    color: inherit !important;
+    font-weight: bold !important;
+}
+
+/* --- Страница /MNIGHTIS/clubs (отдельная вкладка) --- */
+body#profiles_clubs .subheadline {
+    font-size: 0 !important;
+}
+body#profiles_clubs .subheadline::after {
+    content: "Тусовки" !important;
+    font-size: 15px !important;
+    color: inherit !important;
+    font-weight: bold !important;
+}
