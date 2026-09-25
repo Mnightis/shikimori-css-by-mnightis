@@ -213,3 +213,26 @@ a[href*="/clubs"] .headline::after {
     color: inherit;
     font-weight: bold;
 }
+/* Страница Клубов */
+#profiles_clubs .subheadline { font-size: 0 !important; }
+#profiles_clubs .subheadline::after {
+    content: "Тусовки"; font-size: 15px; color: inherit; font-weight: bold;
+}
+
+/* Страница Друзей */
+#profiles_friends .subheadline { font-size: 0 !important; }
+#profiles_friends .subheadline::after {
+    content: "Кореша"; font-size: 15px; color: inherit; font-weight: bold;
+}
+
+/* Профиль: Друзья (первая колонка) */
+#profiles_show .cc-2a .c-column:first-child .subheadline { font-size: 0 !important; }
+#profiles_show .cc-2a .c-column:first-child .subheadline::after {
+    content: "Кореша"; font-size: 15px; color: inherit; font-weight: bold;
+}
+
+/* Профиль: Клубы (вторая колонка, ссылка внутри) */
+#profiles_show .cc-2a .c-column:nth-child(2) .subheadline > a { font-size: 0 !important; }
+#profiles_show .cc-2a .c-column:nth-child(2) .subheadline > a::after {
+    content: "Тусовки"; font-size: 15px; color: inherit; font-weight: bold;
+}
