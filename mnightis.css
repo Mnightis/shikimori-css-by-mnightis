@@ -191,11 +191,11 @@ header.head h1 {
     color: aqua;
 }
 
-/* ==== ВРЕМЯ ЗА АНИМЕ И МАНГОЙ -> НЕТ ЛИЧНОГО ВРЕМЕНИ ==== */
-.lifetime .label {
+/* ==== ЗНАЧЕНИЕ ВРЕМЕНИ -> НЕТ ЛИЧНОГО ВРЕМЕНИ ==== */
+.lifetime .value {
     font-size: 0 !important;
 }
-.lifetime .label::after {
+.lifetime .value::after {
     content: "НЕТ ЛИЧНОГО ВРЕМЕНИ" !important;
     font-size: 14px !important;
     color: inherit !important;
