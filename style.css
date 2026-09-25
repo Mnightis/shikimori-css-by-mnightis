@@ -1690,3 +1690,13 @@ input{
 body, html {
     background: black !important;
     }
+/* Принудительный чёрный фон для всех основных контейнеров */
+html, body, .l-page, #wrapper, .l-content {
+    background: black !important;
+    background-color: black !important;
+}
+
+/* Убираем белые подложки у блоков */
+.b-db_entry, .p-profiles, .b-comments, .b-message, .b-topic, .b-menu {
+    background-color: transparent !important;
+}
