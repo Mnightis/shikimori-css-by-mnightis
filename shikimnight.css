@@ -1,5 +1,5 @@
 /* ============================================
-   SHIKIMORI CSS by MNIGHTIS (FIXED v5)
+   SHIKIMORI CSS by MNIGHTIS (FIXED v6)
    ============================================ */
 
 /* ==== ЧЁРНЫЙ ФОН ==== */
@@ -37,7 +37,7 @@ a:visited { color: plum !important; }
 }
 
 /* ============================================
-   БАЗОВЫЕ ПЛАШКИ (БЕЗ СЖАТИЯ И РАСТЯГИВАНИЯ)
+   БАЗОВЫЕ ПЛАШКИ (ИДЕАЛЬНОЕ ЦЕНТРИРОВАНИЕ ЧЕРЕЗ FLEXBOX)
    ============================================ */
 .headline,
 .midheadline,
@@ -48,9 +48,15 @@ a:visited { color: plum !important; }
     font-weight: 700;
     background-color: rgba(227,27,227,0.37) !important;
     border-left: none;
-    line-height: 28px !important;
+    
+    /* Жесткое центрирование */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    
+    /* Отступы и высота */
     min-height: 28px !important;
-    padding: 0 10px !important;
+    padding: 2px 15px !important; /* Симметричные отступы, чтобы текст не прилипал */
     box-sizing: border-box !important;
 }
 
@@ -67,9 +73,8 @@ body#profiles_friends .subheadline {
 body#profiles_friends .subheadline::after {
     content: "КОРЕША" !important;
     font-size: 14px !important;
-    line-height: 28px !important;
+    line-height: 1 !important;
     display: inline-block !important;
-    vertical-align: top !important;
 }
 
 /* Клубы -> ТУСОВКИ */
@@ -81,37 +86,38 @@ body#profiles_clubs .subheadline {
 body#profiles_clubs .subheadline::after {
     content: "ТУСОВКИ" !important;
     font-size: 14px !important;
-    line-height: 28px !important;
+    line-height: 1 !important;
     display: inline-block !important;
-    vertical-align: top !important;
 }
 
 /* Избранное -> ЛЮБИМОЕ АНИМЕ */
 .profile-content .subheadline > a[href$="/favorites"] {
     font-size: 0 !important;
-    display: inline-block !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     width: 100% !important;
 }
 .profile-content .subheadline > a[href$="/favorites"]::after {
     content: var(--profile-favorites-title, "ЛЮБИМОЕ АНИМЕ") !important;
     font-size: 14px !important;
-    line-height: 28px !important;
+    line-height: 1 !important;
     display: inline-block !important;
-    vertical-align: top !important;
 }
 
 /* Достижения */
 .achievements > .subheadline > a {
     font-size: 0 !important;
-    display: inline-block !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     width: 100% !important;
 }
 .achievements > .subheadline > a::after {
     content: "ДОСТИЖЕНИЯ" !important;
     font-size: 14px !important;
-    line-height: 28px !important;
+    line-height: 1 !important;
     display: inline-block !important;
-    vertical-align: top !important;
 }
 
 /* Обо мне */
@@ -121,23 +127,23 @@ body#profiles_clubs .subheadline::after {
 .about > .subheadline::after {
     content: "ОБО МНЕ" !important;
     font-size: 14px !important;
-    line-height: 28px !important;
+    line-height: 1 !important;
     display: inline-block !important;
-    vertical-align: top !important;
 }
 
 /* История */
 .profile-head .c-history .subheadline > a {
     font-size: 0 !important;
-    display: inline-block !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
     width: 100% !important;
 }
 .profile-head .c-history .subheadline > a::after {
     content: "ИСТОРИЯ" !important;
     font-size: 14px !important;
-    line-height: 28px !important;
+    line-height: 1 !important;
     display: inline-block !important;
-    vertical-align: top !important;
 }
 
 /* ============================================
@@ -170,7 +176,7 @@ body#profiles_clubs .subheadline::after {
 }
 
 /* ============================================
-   ОСТАЛЬНОЕ ОФОРМЛЕНИЕ (БЕЗ ИЗМЕНЕНИЙ)
+   ОСТАЛЬНОЕ ОФОРМЛЕНИЕ
    ============================================ */
 .avatar img { border-radius: 50%; box-shadow: 3px 3px 10px purple; }
 .l-top_menu-v2 { background: #1a1a1a !important; color: violet !important; font-weight: bold; border-bottom: 1px solid violet; }
