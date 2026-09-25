@@ -160,4 +160,34 @@ header.head h1 {
 
 .b-nothing_here {
     color: aqua;
+}/* ==== ПЕРЕИМЕНОВАНИЕ БЛОКОВ ==== */
+
+/* Друзья -> Кореша */
+a[href*="/friends"] .subheadline,
+a[href*="/friends"] .midheadline,
+a[href*="/friends"] .headline {
+    font-size: 0 !important;
+}
+a[href*="/friends"] .subheadline::after,
+a[href*="/friends"] .midheadline::after,
+a[href*="/friends"] .headline::after {
+    content: "Кореша";
+    font-size: 15px;
+    color: inherit;
+    font-weight: bold;
+}
+
+/* Клубы -> Тусовки */
+a[href*="/clubs"] .subheadline,
+a[href*="/clubs"] .midheadline,
+a[href*="/clubs"] .headline {
+    font-size: 0 !important;
+}
+a[href*="/clubs"] .subheadline::after,
+a[href*="/clubs"] .midheadline::after,
+a[href*="/clubs"] .headline::after {
+    content: "Тусовки";
+    font-size: 15px;
+    color: inherit;
+    font-weight: bold;
 }
