@@ -1,0 +1,367 @@
+/* ============================================
+   SHIKIMORI CSS by MNIGHTIS (FIXED v18)
+   ============================================ */
+
+/* ==== ЧЁРНЫЙ ФОН ==== */
+html, body, .l-page, .l-content, #wrapper, .b-layout {
+    background: #0a0a0a !important;
+    background-color: #0a0a0a !important;
+    background-image: none !important;
+}
+
+/* ==== ШРИФТ ==== */
+@font-face {
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/caveat/v18/WnznHAc5bAfYB2QRah7pcpNvOx-pjfJ9eIGpYSxP.woff2) format('woff2');
+}
+header.head h1,
+.b-comment > .inner .name-date a.name {
+    font-family: 'Caveat', cursive !important;
+}
+
+/* ==== ССЫЛКИ (ЯРКО-РОЗОВЫЙ) ==== */
+a, .profile-head .misc a, .profile-head .c-brief .misc a, 
+.b-stats_bar .title, .b-stats_bar a.title,
+header.head h1 {
+    color: #ff1493 !important;
+}
+
+/* ==== ЗАГОЛОВКИ РАЗДЕЛОВ (РОЗОВЫЙ) ==== */
+.headline, .midheadline, .subheadline,
+.p-profiles .profile-head .c-brief header .notice,
+.activity .title {
+    color: #ff69b4 !important;
+}
+
+/* ==== ЗАГОЛОВКИ ДОСТИЖЕНИЙ ==== */
+.achievements .header .title,
+.achievements .header a.size {
+    color: #ff1493 !important;
+    font-weight: bold !important;
+}
+
+/* ==== "АКТИВНОСТЬ:" ==== */
+.c-additionals b {
+    color: #ff1493 !important;
+    font-weight: bold !important;
+}
+
+/* ============================================
+   ЕДИНЫЙ ЦВЕТ ДЛЯ ВТОРОСТЕПЕННОГО ТЕКСТА
+   ============================================ */
+.b-stats_bar .stat_names .stat_name a,
+.b-stats_bar .stat_names .stat_name .size,
+.c-additionals, .c-additionals a,
+.lifetime .title::before,
+.lifetime .title .label {
+    color: #ffb6c1 !important;
+}
+
+/* ============================================
+   ТЕКСТ "1 НЕДЕЛЯ", "1 МЕСЯЦ"
+   ============================================ */
+.lifetime .times .time,
+.lifetime .times .time.checked {
+    color: #ffb6c1 !important;
+}
+
+/* ============================================
+   ГАЛОЧКИ - ЗЕЛЁНЫЕ
+   ============================================ */
+.lifetime .times .time.checked::before {
+    color: #4caf50 !important;
+    fill: #4caf50 !important;
+}
+.lifetime .times .time.checked i,
+.lifetime .times .time.checked svg,
+.lifetime .times .time.checked span {
+    color: #ffb6c1 !important;
+    fill: #ffb6c1 !important;
+}
+
+/* График (Бары) */
+.graph .bar, .graph .bar div, .graph rect {
+    background-color: #ff69b4 !important;
+    fill: #ff69b4 !important;
+}
+
+/* ==== ОСТАЛЬНЫЕ ЭЛЕМЕНТЫ ==== */
+.profile-head .c-brief header .notice span,
+.profile-head .c-brief header .notice span .b-tooltipped {
+    color: #ffb6c1 !important;
+    background: transparent !important;
+    border-bottom-color: #ffb6c1 !important;
+}
+.profile-head .c-brief header .notice span .b-tooltipped:hover {
+    background: transparent !important;
+    color: #ff1493 !important;
+}
+
+/* ==== БЛОК ВРЕМЕНИ ==== */
+.lifetime .title {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+.lifetime .title .value { display: none !important; }
+.lifetime .title::before {
+    font-size: 12px !important;
+    font-weight: normal !important;
+    display: block !important;
+    line-height: 1.2 !important;
+    text-align: left !important;
+}
+.lifetime .title .label {
+    font-size: 12px !important;
+    font-weight: normal !important;
+    display: block !important;
+    line-height: 1.2 !important;
+    text-align: right !important;
+}
+
+/* ============================================
+   ПЛАШКИ
+   ============================================ */
+.profile-content .subheadline,
+.achievements > .subheadline,
+.about > .subheadline,
+.profile-head .c-history .subheadline,
+.profile-content .block .subheadline {
+    background-color: #ff1493 !important;
+    border-radius: 10px 70px 10px 70px !important;
+    padding: 4px 15px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-height: 28px !important;
+    text-align: center !important;
+    border-left: none !important;
+}
+
+/* ==== ЧЁРНЫЙ ТЕКСТ ДЛЯ ПЛАШЕК ==== */
+.profile-content .block .subheadline {
+    color: #0a0a0a !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+}
+
+/* ==== ИСПРАВЛЕНИЕ ДУБЛИРОВАНИЯ "ОБО МНЕ" ==== */
+.about > .subheadline {
+    font-size: 0 !important;
+    color: transparent !important;
+    text-indent: -9999px !important;
+}
+.about > .subheadline::after {
+    content: "ОБО МНЕ" !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #0a0a0a !important;
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+    line-height: 1.2 !important;
+    text-indent: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ==== СКРЫТИЕ СТАРОГО ТЕКСТА И НОВЫЙ ТЕКСТ ==== */
+.profile-content .subheadline > a[href$="/favorites"],
+.achievements > .subheadline > a,
+.profile-head .c-history .subheadline > a {
+    font-size: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    text-align: center !important;
+    color: transparent !important;
+}
+
+.profile-content .subheadline > a[href$="/favorites"]::after,
+.achievements > .subheadline > a::after,
+.profile-head .c-history .subheadline > a::after {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #0a0a0a !important;
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.profile-content .subheadline > a[href$="/favorites"]::after { content: "ЛЮБИМОЕ АНИМЕ" !important; }
+.achievements > .subheadline > a::after { content: "ДОСТИЖЕНИЯ" !important; }
+.profile-head .c-history .subheadline > a::after { content: "ИСТОРИЯ" !important; }
+
+/* ==== "КОРЕША" И "ТУСОВКИ" ==== */
+body#profiles_show .cc-2a .c-column:nth-child(1) .subheadline,
+body#profiles_show .cc-2a .c-column:nth-child(2) .subheadline,
+body#profiles_friends .subheadline,
+body#profiles_clubs .subheadline {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-height: auto !important;
+    margin-bottom: 5px !important;
+    color: #ff1493 !important;
+    text-align: left !important;
+    font-size: 0 !important;
+}
+
+body#profiles_show .cc-2a .c-column:nth-child(1) .subheadline::after,
+body#profiles_show .cc-2a .c-column:nth-child(2) .subheadline::after,
+body#profiles_friends .subheadline::after,
+body#profiles_clubs .subheadline::after {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    color: #ff1493 !important;
+    display: block !important;
+    text-align: left !important;
+    width: auto !important;
+    line-height: 1.2 !important;
+}
+
+body#profiles_show .cc-2a .c-column:nth-child(1) .subheadline::after,
+body#profiles_friends .subheadline::after { content: "КОРЕША" !important; }
+
+body#profiles_show .cc-2a .c-column:nth-child(2) .subheadline::after,
+body#profiles_clubs .subheadline::after { content: "ТУСОВКИ" !important; }
+
+/* ============================================
+   ОБВОДКИ ДЛЯ АВАТАРОК (КОРЕША И ТУСОВКИ)
+   ============================================ */
+.cc-friends .b-user .avatar img,
+.b-clubs .b-club .avatar img,
+.b-clubs .b-club .logo {
+    border: 2px solid #ff1493 !important;
+    box-shadow: 0 0 8px #ff1493 !important;
+    border-radius: 50% !important;
+    transition: all 0.2s ease !important;
+}
+.cc-friends .b-user .avatar img:hover,
+.b-clubs .b-club .avatar img:hover,
+.b-clubs .b-club .logo:hover {
+    box-shadow: 0 0 12px #ff69b4 !important;
+    transform: scale(1.05) !important;
+}
+
+/* ============================================
+   ОБВОДКИ ДЛЯ ОБЛОЖЕК "ЛЮБИМОЕ АНИМЕ"
+   ============================================ */
+.cc-favourites .b-catalog_entry .cover .image-decor {
+    border: 2px solid #ff1493 !important;
+    box-shadow: 0 0 6px #ff1493 !important;
+    border-radius: 10px 10px 0 10px !important;
+    transition: all 0.2s ease !important;
+}
+.cc-favourites .b-catalog_entry .cover .image-decor:hover {
+    box-shadow: 0 0 12px #ff69b4 !important;
+}
+
+/* ============================================
+   ОБВОДКИ ДЛЯ ФРАНШИЗ (АКТИВНЫЕ / НЕАКТИВНЫЕ)
+   ============================================ */
+/* Активные (level-1) - ярко-розовая обводка как у "Любимого аниме" */
+.b-badge.level-1 img {
+    border: 2px solid #ff1493 !important;
+    box-shadow: 0 0 6px #ff1493 !important;
+    border-radius: 5px !important;
+    opacity: 1 !important;
+    transition: all 0.2s ease !important;
+}
+.b-badge.level-1 img:hover {
+    box-shadow: 0 0 12px #ff69b4 !important;
+}
+
+/* Неактивные (level-0) - светло-розовая обводка + затемнение */
+.b-badge.level-0 img {
+    border: 2px solid #ffb6c1 !important;
+    box-shadow: none !important;
+    border-radius: 5px !important;
+    opacity: 0.6 !important;
+    filter: grayscale(50%) !important;
+    transition: all 0.2s ease !important;
+}
+.b-badge.level-0 img:hover {
+    opacity: 1 !important;
+    filter: grayscale(0%) !important;
+    box-shadow: 0 0 8px #ffb6c1 !important;
+}
+
+/* ============================================
+   ПОЛЕ ВВОДА КОММЕНТАРИЯ
+   ============================================ */
+.b-form textarea,
+.b-input textarea,
+textarea,
+div[contenteditable="true"],
+.b-form .editor,
+.b-input .editor {
+    background-color: #ffb6c1 !important;
+    color: #0a0a0a !important;
+    border: 1px solid #ff1493 !important;
+    border-radius: 10px !important;
+    padding: 10px !important;
+    box-shadow: none !important;
+}
+
+.b-form textarea:focus,
+.b-input textarea:focus,
+textarea:focus,
+div[contenteditable="true"]:focus,
+.b-form .editor:focus,
+.b-input .editor:focus {
+    background-color: #ff69b4 !important;
+    outline: none !important;
+    border-color: #ff1493 !important;
+}
+
+/* ============================================
+   ПОДПИСЬ "by MNIGHTIS"
+   ============================================ */
+.l-footer .links:after { content: "" !important; }
+.l-footer::after {
+    content: "by MNIGHTIS" !important;
+    display: block !important;
+    text-align: center !important;
+    color: #ffb6c1 !important;
+    font-family: 'Caveat', cursive !important;
+    font-size: 16px !important;
+    margin-top: 15px !important;
+    opacity: 0.8 !important;
+}
+
+/* ============================================
+   ОСТАЛЬНОЕ ОФОРМЛЕНИЕ
+   ============================================ */
+.avatar img { border-radius: 50%; box-shadow: 3px 3px 10px #ff69b4; }
+.l-top_menu-v2 { background: #1a1a1a !important; color: #ff69b4 !important; font-weight: bold; border-bottom: 1px solid #ff69b4; }
+.l-top_menu-v2 .submenu { background: #2a2a2a !important; border: none; border-radius: 0 0 30px 30px; box-shadow: 0 20px 20px #ff69b4; }
+.b-stats_bar .bar .first, .b-stats_bar .bar .second, .b-stats_bar .bar .third { background-color: #ff69b4 !important; border-radius: 100px 30px 100px 30px; }
+.bar-container .bar { background: #ff69b4 !important; border-radius: 50px; }
+header.head h1 { color: #ff1493 !important; text-shadow: 2px 2px 5px #ff69b4; }
+.b-comment > .inner header img { border-radius: 50%; border: solid 1px #ff1493; box-shadow: 3px 3px 5px #ff69b4; }
+.b-link_button, .b-button { border-radius: 10px 70px 10px 70px; background-color: #ffb6c1; border: solid 1px #ff1493; color: #0a0a0a; font-weight: bold; }
+.b-link_button:hover, .b-button:hover { background-color: #ff1493; box-shadow: 5px 5px 10px #ff69b4; border-radius: 70px 10px 70px 10px; }
+.b-db_entry > .c-image img { border-radius: 20px; box-shadow: 3px 3px 5px #ff69b4; }
+.b-catalog_entry .cover .title { color: #ff1493 !important; text-align: center; }
+::selection { background: #ff1493; color: white; }
+.b-db_entry, .p-profiles, .b-comments, .b-message, .b-topic, .b-menu, .b-block, .b-catalog_entry, .l-menu, .b-footer, .l-footer, .b-form, .b-input { background-color: transparent !important; color: #ffb6c1; }
+.p-profiles .profile-head .c-brief header .notice { color: #ff69b4; text-shadow: 1px 1px 3px #ff69b4; }
+.p-profiles .profile-head .c-history .entry .title { color: #ff69b4; }
+.p-profiles .profile-head .c-history .entry .misc, .p-profiles .profile-head .c-history .entry .misc.date { color: #ffb6c1 !important; }
+.b-tooltipped:not(a) { color: #ffb6c1; }
+.b-nothing_here { color: #ff1493; }
