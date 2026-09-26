@@ -1,0 +1,589 @@
+/* ============================================
+   Shikimori custom styles by MNIGHTIS
+   ============================================ */
+
+/* ==== ЧЁРНЫЙ ФОН ==== */
+html, body, .l-page, .l-content, #wrapper, .b-layout {
+    background: #0a0a0a !important;
+    background-color: #0a0a0a !important;
+    background-image: none !important;
+}
+
+/* ==== ШРИФТ ==== */
+@font-face {
+    font-family: 'Caveat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/caveat/v18/WnznHAc5bAfYB2QRah7pcpNvOx-pjfJ9eIGpYSxP.woff2) format('woff2');
+}
+header.head h1,
+.b-comment > .inner .name-date a.name {
+    font-family: 'Caveat', cursive !important;
+}
+
+/* ==== ССЫЛКИ ==== */
+a, .profile-head .misc a, .profile-head .c-brief .misc a,
+.b-stats_bar .title, .b-stats_bar a.title,
+header.head h1 { color: #ff1493 !important; }
+
+/* ==== ЗАГОЛОВКИ ==== */
+.headline, .midheadline, .subheadline,
+.p-profiles .profile-head .c-brief header .notice,
+.activity .title { color: #ff69b4 !important; }
+
+/* ==== ДОСТИЖЕНИЯ ==== */
+.achievements .header .title,
+.achievements .header a.size { color: #ff1493 !important; font-weight: bold !important; }
+
+/* ==== "АКТИВНОСТЬ:" ==== */
+.c-additionals b { color: #ff1493 !important; font-weight: bold !important; }
+
+/* ==== ВТОРОСТЕПЕННЫЙ ТЕКСТ ==== */
+.b-stats_bar .stat_names .stat_name a,
+.b-stats_bar .stat_names .stat_name .size,
+.c-additionals, .c-additionals a,
+.lifetime .title::before,
+.lifetime .title .label,
+.lifetime .times .time,
+.lifetime .times .time.checked { color: #ffb6c1 !important; }
+
+/* ==== ГАЛОЧКИ ==== */
+.lifetime .times .time.checked::before { color: #4caf50 !important; fill: #4caf50 !important; }
+.lifetime .times .time.checked i,
+.lifetime .times .time.checked svg,
+.lifetime .times .time.checked span { color: #ffb6c1 !important; fill: #ffb6c1 !important; }
+
+/* ==== ГРАФИК ==== */
+.graph .bar, .graph .bar div, .graph rect { background-color: #ff69b4 !important; fill: #ff69b4 !important; }
+
+/* ==== ДАТА ==== */
+.profile-head .c-brief header .notice span,
+.profile-head .c-brief header .notice span .b-tooltipped {
+    color: #ffb6c1 !important;
+    background: transparent !important;
+    border-bottom-color: #ffb6c1 !important;
+}
+.profile-head .c-brief header .notice span .b-tooltipped:hover {
+    background: transparent !important;
+    color: #ff1493 !important;
+}
+
+/* ==== БЛОК ВРЕМЕНИ ==== */
+.lifetime .title {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+.lifetime .title .value { display: none !important; }
+.lifetime .title::before {
+    font-size: 12px !important;
+    font-weight: normal !important;
+    display: block !important;
+    line-height: 1.2 !important;
+    text-align: left !important;
+}
+.lifetime .title .label {
+    font-size: 12px !important;
+    font-weight: normal !important;
+    display: block !important;
+    line-height: 1.2 !important;
+    text-align: right !important;
+}
+
+/* ==== ПЛАШКИ ==== */
+.profile-content .subheadline,
+.achievements > .subheadline,
+.about > .subheadline,
+.profile-content .block .subheadline {
+    background-color: #ff1493 !important;
+    border-radius: 10px 70px 10px 70px !important;
+    padding: 4px 15px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-height: 28px !important;
+    text-align: center !important;
+    border-left: none !important;
+}
+
+.profile-content .block .subheadline {
+    color: #0a0a0a !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+}
+
+/* ==== ОБО МНЕ ==== */
+.about > .subheadline {
+    font-size: 0 !important;
+    color: transparent !important;
+    text-indent: -9999px !important;
+}
+.about > .subheadline::after {
+    content: "ОБО МНЕ" !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #0a0a0a !important;
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+    line-height: 1.2 !important;
+    text-indent: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ==== СКРЫТИЕ СТАРОГО ТЕКСТА ==== */
+.profile-content .subheadline > a[href$="/favorites"],
+.achievements > .subheadline > a {
+    font-size: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    text-align: center !important;
+    color: transparent !important;
+}
+.profile-content .subheadline > a[href$="/favorites"]::after,
+.achievements > .subheadline > a::after {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #0a0a0a !important;
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.profile-content .subheadline > a[href$="/favorites"]::after { content: "ЛЮБИМОЕ АНИМЕ" !important; }
+.achievements > .subheadline > a::after { content: "ДОСТИЖЕНИЯ" !important; }
+
+/* ==== "КОРЕША" И "ТУСОВКИ" ==== */
+body#profiles_show .cc-2a .c-column:nth-child(1) .subheadline,
+body#profiles_show .cc-2a .c-column:nth-child(2) .subheadline,
+body#profiles_friends .subheadline,
+body#profiles_clubs .subheadline {
+    background-color: #ff1493 !important;
+    border: none !important;
+    border-radius: 10px 70px 10px 70px !important;
+    padding: 4px 15px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-height: 28px !important;
+    text-align: center !important;
+    font-size: 0 !important;
+    margin-bottom: 10px !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+}
+
+body#profiles_show .cc-2a .c-column:nth-child(1) .subheadline::after,
+body#profiles_show .cc-2a .c-column:nth-child(2) .subheadline::after,
+body#profiles_friends .subheadline::after,
+body#profiles_clubs .subheadline::after {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #0a0a0a !important;
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+    line-height: 1.2 !important;
+}
+
+body#profiles_show .cc-2a .c-column:nth-child(1) .subheadline::after,
+body#profiles_friends .subheadline::after { content: "КОРЕША" !important; }
+
+body#profiles_show .cc-2a .c-column:nth-child(2) .subheadline::after,
+body#profiles_clubs .subheadline::after { content: "ТУСОВКИ" !important; }
+
+body#profiles_show .cc-2a .c-column:nth-child(2) .subheadline > a,
+body#profiles_clubs .subheadline > a {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 10 !important;
+    display: block !important;
+    font-size: 0 !important;
+    color: transparent !important;
+    cursor: pointer !important;
+}
+
+/* ==== АВАТАРКИ ==== */
+.cc-friends, .b-clubs {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.cc-friends .b-user {
+    display: block !important;
+    width: 44px !important;
+    height: 44px !important;
+    margin: 0 !important;
+    position: relative !important;
+    float: none !important;
+}
+
+.cc-friends .b-user .avatar {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.cc-friends .b-user .avatar img {
+    border: 2px solid #ff1493 !important;
+    box-shadow: none !important;
+    border-radius: 4px !important;
+    transition: all 0.2s ease !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    font-size: 0 !important;
+}
+
+.b-clubs .b-club {
+    display: block !important;
+    width: 44px !important;
+    height: 44px !important;
+    margin: 0 !important;
+    position: relative !important;
+    float: none !important;
+    cursor: pointer !important;
+}
+
+.b-clubs .b-club a {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 10 !important;
+    cursor: pointer !important;
+}
+
+.b-clubs .b-club img,
+.b-clubs .b-club .logo {
+    border: 2px solid #ff1493 !important;
+    box-shadow: none !important;
+    border-radius: 4px !important;
+    transition: all 0.2s ease !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    font-size: 0 !important;
+    color: transparent !important;
+}
+
+/* ==== ОБЛОЖКИ ==== */
+.cc-favourites .b-catalog_entry .cover .image-decor {
+    border: 2px solid #ff1493 !important;
+    box-shadow: none !important;
+    border-radius: 4px !important;
+    transition: all 0.2s ease !important;
+    margin: 2px !important;
+}
+.cc-favourites .b-catalog_entry .cover .image-decor:hover { transform: none !important; }
+
+/* ==== ФРАНШИЗЫ ==== */
+.b-badge.level-1 img {
+    border: 2px solid #ff1493 !important;
+    box-shadow: none !important;
+    border-radius: 4px !important;
+    opacity: 1 !important;
+    transition: all 0.2s ease !important;
+    margin: 2px !important;
+}
+.b-badge.level-0 img {
+    border: 2px solid #ffb6c1 !important;
+    box-shadow: none !important;
+    border-radius: 4px !important;
+    opacity: 0.6 !important;
+    filter: grayscale(50%) !important;
+    transition: all 0.2s ease !important;
+    margin: 2px !important;
+}
+.b-badge.level-0 img:hover { opacity: 1 !important; filter: grayscale(0%) !important; }
+
+/* ==== ПОЛЕ КОММЕНТАРИЯ ==== */
+.b-form textarea, .b-input textarea, textarea,
+div[contenteditable="true"], .b-form .editor, .b-input .editor {
+    background-color: #ffb6c1 !important;
+    color: #0a0a0a !important;
+    border: 1px solid #ff1493 !important;
+    border-radius: 10px !important;
+    padding: 10px !important;
+    box-shadow: none !important;
+}
+.b-form textarea:focus, .b-input textarea:focus, textarea:focus,
+div[contenteditable="true"]:focus, .b-form .editor:focus, .b-input .editor:focus {
+    background-color: #ff69b4 !important;
+    outline: none !important;
+    border-color: #ff1493 !important;
+}
+
+/* ==== ПОДПИСЬ ==== */
+.l-footer .links:after { content: "" !important; }
+.l-footer::after {
+    content: "by MNIGHTIS" !important;
+    display: block !important;
+    text-align: center !important;
+    color: #ffb6c1 !important;
+    font-family: 'Caveat', cursive !important;
+    font-size: 16px !important;
+    margin-top: 15px !important;
+    opacity: 0.8 !important;
+}
+
+/* ==== ОСТАЛЬНОЕ ==== */
+.avatar img { border-radius: 50%; box-shadow: 3px 3px 10px #ff69b4; }
+.l-top_menu-v2 { background: #1a1a1a !important; color: #ff69b4 !important; font-weight: bold; border-bottom: 1px solid #ff69b4; }
+.l-top_menu-v2 .submenu { background: #2a2a2a !important; border: none; border-radius: 0 0 30px 30px; box-shadow: 0 20px 20px #ff69b4; }
+.b-stats_bar .bar .first, .b-stats_bar .bar .second, .b-stats_bar .bar .third { background-color: #ff69b4 !important; border-radius: 100px 30px 100px 30px; }
+.bar-container .bar { background: #ff69b4 !important; border-radius: 50px; }
+header.head h1 { color: #ff1493 !important; text-shadow: 2px 2px 5px #ff69b4; }
+.b-comment > .inner header img { border-radius: 50%; border: solid 1px #ff1493; box-shadow: 3px 3px 5px #ff69b4; }
+.b-link_button, .b-button { border-radius: 10px 70px 10px 70px; background-color: #ffb6c1; border: solid 1px #ff1493; color: #0a0a0a; font-weight: bold; }
+.b-link_button:hover, .b-button:hover { background-color: #ff1493; box-shadow: 5px 5px 10px #ff69b4; border-radius: 70px 10px 70px 10px; }
+.b-db_entry > .c-image img { border-radius: 20px; box-shadow: 3px 3px 5px #ff69b4; }
+.b-catalog_entry .cover .title { color: #ff1493 !important; text-align: center; }
+::selection { background: #ff1493; color: white; }
+.b-db_entry, .p-profiles, .b-comments, .b-message, .b-topic, .b-menu, .b-block, .b-catalog_entry, .l-menu, .b-footer, .l-footer, .b-form, .b-input { background-color: transparent !important; color: #ffb6c1; }
+.p-profiles .profile-head .c-brief header .notice { color: #ff69b4; text-shadow: 1px 1px 3px #ff69b4; }
+.p-profiles .profile-head .c-history .entry .misc, .p-profiles .profile-head .c-history .entry .misc.date { color: #ffb6c1 !important; }
+.b-tooltipped:not(a) { color: #ffb6c1; }
+.b-nothing_here { color: #ff1493; }
+
+/* ============================================
+   ИКОНКИ (ЭМОДЗИ)
+   ============================================ */
+.profile-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 10px 0 15px 0 !important;
+    width: 100% !important;
+}
+
+.profile-actions a,
+.profile-actions .mail,
+.profile-actions .talk,
+.profile-actions .settings,
+.profile-actions .ban {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    background: rgba(255, 20, 147, 0.15) !important;
+    border: 1px solid #ff1493 !important;
+    color: #ff1493 !important;
+    font-size: 0 !important;
+    text-decoration: none !important;
+    transition: 0.2s ease !important;
+    float: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    line-height: 1 !important;
+}
+
+.profile-actions a:hover,
+.profile-actions .mail:hover,
+.profile-actions .talk:hover,
+.profile-actions .settings:hover,
+.profile-actions .ban:hover {
+    background: #ff1493 !important;
+    transform: scale(1.1) !important;
+}
+
+.profile-actions .mail::before { content: "📩" !important; font-size: 18px !important; line-height: 1 !important; display: block !important; }
+.profile-actions .talk::before { content: "💬" !important; font-size: 18px !important; line-height: 1 !important; display: block !important; }
+.profile-actions .settings::before { content: "⚙️" !important; font-size: 18px !important; line-height: 1 !important; display: block !important; }
+.profile-actions .ban::before { content: "⛔" !important; font-size: 18px !important; line-height: 1 !important; display: block !important; }
+
+.profile-actions .icon,
+.profile-actions .label,
+.profile-actions .text { display: none !important; }
+
+/* ============================================
+   ПК: ФОН ТОЛЬКО НА .c-brief + ИСТОРИЯ ОТДЕЛЬНО СНИЗУ
+   ============================================ */
+@media (min-width: 1024px) {
+
+    /* Убираем фон у всего profile-head, чтобы не перекрывал историю */
+    .p-profiles .profile-head {
+        background: transparent !important;
+        background-image: none !important;
+    }
+
+    /* Фон только на блоке с аватаркой и ником */
+    .p-profiles .profile-head .c-brief {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://i.imgur.com/wOrr0PE.jpg") !important;
+        background-size: cover !important;
+        background-position: center 30% !important;
+        background-repeat: no-repeat !important;
+        border-radius: 15px !important;
+        padding: 15px !important;
+        margin-bottom: 15px !important;
+        box-shadow: 0 0 15px rgba(255, 20, 147, 0.4) !important;
+    }
+
+    /* История — отдельная тёмная плашка СВЕРХУ */
+    .p-profiles .profile-head .c-history,
+    .p-profiles .profile-head .c-history.x2,
+    .p-profiles .profile-head .c-history.x3 {
+        background: rgba(0, 0, 0, 0.6) !important;
+        border-radius: 12px !important;
+        padding: 10px !important;
+        margin: 0 0 15px 0 !important;
+        position: relative !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* ============================================
+   МОБИЛКА: ФОН НА ВЕСЬ profile-head + ИСТОРИЯ БЛИЖЕ
+   ============================================ */
+@media (max-width: 1023px) {
+
+    .p-profiles .profile-head {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("https://i.imgur.com/wOrr0PE.jpg") !important;
+        background-size: cover !important;
+        background-position: center 20% !important;
+        background-repeat: no-repeat !important;
+        border-radius: 15px !important;
+        padding: 15px !important;
+        margin: 0 0 15px 0 !important;
+        box-shadow: 0 0 15px rgba(255, 20, 147, 0.4) !important;
+    }
+
+    .p-profiles .profile-head .c-history,
+    .p-profiles .profile-head .c-history.x2,
+    .p-profiles .profile-head .c-history.x3 {
+        background: rgba(0, 0, 0, 0.55) !important;
+        border-radius: 12px !important;
+        padding: 10px !important;
+        margin: 0 0 12px 0 !important;
+        display: block !important;
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        transform: none !important;
+        z-index: auto !important;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Заголовок «📃 ИСТОРИЯ» — вплотную к записи */
+    .p-profiles .profile-head .c-history .subheadline,
+    .p-profiles .profile-head .c-history .subheadline.m13 {
+        display: flex !important;
+        position: relative !important;
+        width: 100% !important;
+        left: auto !important;
+        top: auto !important;
+        margin: 0 0 4px 0 !important;
+        border: none !important;
+        background: transparent !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        min-height: auto !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        font-size: 0 !important;
+        box-sizing: border-box !important;
+        line-height: 1 !important;
+    }
+
+    .p-profiles .profile-head .c-history .subheadline a {
+        font-size: 0 !important;
+        color: transparent !important;
+        text-decoration: none !important;
+        display: block !important;
+        width: 100% !important;
+        text-align: left !important;
+        position: relative !important;
+        line-height: 1 !important;
+    }
+
+    .p-profiles .profile-head .c-history .subheadline a::after {
+        content: "📃 ИСТОРИЯ" !important;
+        font-size: 16px !important;
+        font-weight: 700 !important;
+        color: #ff69b4 !important;
+        font-family: 'Caveat', cursive !important;
+        display: inline-block !important;
+        line-height: 1 !important;
+        text-align: left !important;
+    }
+
+    .p-profiles .profile-head .c-history .entry {
+        display: none !important;
+    }
+    .p-profiles .profile-head .c-history .entry:nth-child(1) {
+        display: block !important;
+        position: relative !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 8px 10px !important;
+        animation: none !important;
+        background: rgba(255, 20, 147, 0.12) !important;
+        border-radius: 10px !important;
+        box-shadow: none !important;
+        float: none !important;
+        box-sizing: border-box !important;
+    }
+
+    .p-profiles .profile-head .c-history .entry .misc {
+        animation: none !important;
+        display: block !important;
+        white-space: normal !important;
+        text-align: left !important;
+        width: auto !important;
+        font-size: 12px !important;
+    }
+    .p-profiles .profile-head .c-history .entry .title {
+        font-size: 13px !important;
+        color: #ff69b4 !important;
+        text-align: left !important;
+        animation: none !important;
+    }
+    .p-profiles .profile-head .c-history .entry img {
+        max-height: 50px !important;
+        max-width: 34px !important;
+        border-radius: 6px !important;
+        float: left !important;
+        margin: 0 8px 0 0 !important;
+    }
+
+    .profile-actions a,
+    .profile-actions .mail,
+    .profile-actions .talk,
+    .profile-actions .settings,
+    .profile-actions .ban { width: 36px !important; height: 36px !important; }
+    .profile-actions .mail::before,
+    .profile-actions .talk::before,
+    .profile-actions .settings::before,
+    .profile-actions .ban::before { font-size: 16px !important; }
+}
