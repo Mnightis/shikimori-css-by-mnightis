@@ -581,9 +581,6 @@ header.head h1 { color: #ff1493 !important; text-shadow: 2px 2px 5px #ff69b4; }
     .profile-actions .settings::before,
     .profile-actions .ban::before { font-size: 16px !important; }
 
-    /* ============================================
-       СКРЫТИЕ ДУБЛИРУЮЩЕГО ТЕКСТА "ПОЧТА, ИСТОРИЯ, НАСТРОЙКИ, МОИ БАНЫ" НА МОБИЛКЕ
-       ============================================ */
     .p-profiles .profile-head .c-mobile-actions,
     .p-profiles .profile-head .c-mobile-actions a,
     .p-profiles .profile-head .c-mobile-actions span,
@@ -591,7 +588,6 @@ header.head h1 { color: #ff1493 !important; text-shadow: 2px 2px 5px #ff69b4; }
         display: none !important;
     }
 
-    /* На всякий случай: если текст лежит внутри profile-actions, скрываем любой текст-контент */
     .p-profiles .profile-head .profile-actions a > span,
     .p-profiles .profile-head .profile-actions a > b,
     .p-profiles .profile-head .profile-actions a > i,
@@ -599,9 +595,10 @@ header.head h1 { color: #ff1493 !important; text-shadow: 2px 2px 5px #ff69b4; }
         display: none !important;
         font-size: 0 !important;
     }
-  }
+}
+
 /* ============================================
-   ФИКС: ТЕКСТ И ИКОНКИ В РЕДАКТОРЕ (ЧЁРНЫЕ)
+   ФИКС: РЕДАКТОР (ЧЁРНЫЙ ТЕКСТ И ИКОНКИ)
    ============================================ */
 .b-shiki_editor,
 .b-shiki_editor *,
@@ -612,22 +609,29 @@ header.head h1 { color: #ff1493 !important; text-shadow: 2px 2px 5px #ff69b4; }
 textarea,
 div[contenteditable="true"],
 .b-form .editor,
-.b-input .editor {
+.b-input .editor,
+.b-shiki_editor .body,
+.b-shiki_editor .body *,
+.b-shiki_editor .editor,
+.b-shiki_editor .editor * {
     color: #0a0a0a !important;
+    fill: #0a0a0a !important;
 }
 
-/* Плейсхолдер (текст-подсказка внутри пустого поля) */
+/* Плейсхолдер */
 .b-shiki_editor textarea::placeholder,
 .b-input textarea::placeholder,
 textarea::placeholder,
 .ProseMirror[data-placeholder]::before,
 .ProseMirror p.is-editor-empty:first-child::before,
-.b-shiki_editor .ProseMirror p.is-empty::before {
+.ProseMirror p.is-empty::before,
+.b-shiki_editor .ProseMirror p.is-empty:first-child::before,
+.b-shiki_editor .ProseMirror p.is-editor-empty:first-child::before {
     color: #7a2a52 !important;
     opacity: 0.7 !important;
 }
 
-/* Иконки панели редактора (B, I, U, ссылка, картинка и т.д.) */
+/* Кнопки тулбара и иконки */
 .b-shiki_editor .buttons > *,
 .b-shiki_editor .buttons > *::before,
 .b-shiki_editor .editor-controls .icon,
@@ -635,31 +639,43 @@ textarea::placeholder,
 .b-shiki_editor .menubar .icon,
 .b-shiki_editor .menu_group .icon,
 .ProseMirror .menubar .icon,
+.ProseMirror .menu_group .icon,
 .menu_group .icon.is-button,
-.buttons .editor-bold::before,
-.buttons .editor-italic::before,
-.buttons .editor-underline::before,
-.buttons .editor-strike::before,
-.buttons .editor-link::before,
-.buttons .editor-quote::before,
-.buttons .editor-image::before,
-.buttons .editor-smiley::before,
-.buttons .editor-spoiler::before,
-.buttons .editor-file::before {
+.buttons .editor-bold, .buttons .editor-bold::before,
+.buttons .editor-italic, .buttons .editor-italic::before,
+.buttons .editor-underline, .buttons .editor-underline::before,
+.buttons .editor-strike, .buttons .editor-strike::before,
+.buttons .editor-link, .buttons .editor-link::before,
+.buttons .editor-quote, .buttons .editor-quote::before,
+.buttons .editor-image, .buttons .editor-image::before,
+.buttons .editor-smiley, .buttons .editor-smiley::before,
+.buttons .editor-spoiler, .buttons .editor-spoiler::before,
+.buttons .editor-file, .buttons .editor-file::before,
+.buttons .editor-italic:before,
+.buttons .editor-spoiler:before,
+.buttons .editor-smiley:before,
+.buttons .editor-quote:before,
+.buttons .editor-image:before,
+.buttons .editor-link:before,
+.buttons .editor-strike:before,
+.buttons .editor-underline:before,
+.buttons .editor-bold:before {
     color: #0a0a0a !important;
     fill: #0a0a0a !important;
+    border-color: #0a0a0a !important;
 }
 
-/* Иконки при наведении — розовые */
+/* Ховер кнопок */
 .b-shiki_editor .buttons > *:hover::before,
 .b-shiki_editor .editor-controls .icon:hover,
 .b-shiki_editor .menubar .icon:hover,
-.ProseMirror .menubar .icon:hover {
+.ProseMirror .menubar .icon:hover,
+.menu_group .icon.is-button:hover {
     color: #ff1493 !important;
     fill: #ff1493 !important;
 }
 
-/* Ссылки внутри редактора (в т.ч. guns.lol) */
+/* Ссылки в редакторе */
 .ProseMirror a,
 .b-shiki_editor a,
 .b-form a,
@@ -668,7 +684,7 @@ textarea::placeholder,
     text-decoration: underline !important;
 }
 
-/* Курсор в редакторе */
+/* Курсор */
 .ProseMirror,
 .b-shiki_editor textarea,
 textarea,
