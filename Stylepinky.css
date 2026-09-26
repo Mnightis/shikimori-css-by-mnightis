@@ -2,13 +2,9 @@
    Shikimori custom styles by MNIGHTIS
    ============================================ */
 
-/* ============================================
-   НАСТРОЙКА: ССЫЛКА НА ТВОЮ КАРТИНКУ ДЛЯ ШАПКИ
-   Замени ссылку внутри url() на свою картинку
-   ============================================ */
 :root {
-    --header-bg-image: url("https://imgur.com/a/kV8Jjnr");
-    --header-bg-color: rgba(255, 20, 147, 0.15);
+    --header-bg-image: url("https://i.imgur.com/s4U5wiS.jpg");
+    --header-bg-overlay: rgba(0, 0, 0, 0.55);
 }
 
 /* ==== ЧЁРНЫЙ ФОН ==== */
@@ -105,7 +101,6 @@ header.head h1 { color: #ff1493 !important; }
 .profile-content .subheadline,
 .achievements > .subheadline,
 .about > .subheadline,
-.profile-head .c-history .subheadline,
 .profile-content .block .subheadline {
     background-color: #ff1493 !important;
     border-radius: 10px 70px 10px 70px !important;
@@ -147,8 +142,7 @@ header.head h1 { color: #ff1493 !important; }
 
 /* ==== СКРЫТИЕ СТАРОГО ТЕКСТА ==== */
 .profile-content .subheadline > a[href$="/favorites"],
-.achievements > .subheadline > a,
-.profile-head .c-history .subheadline > a {
+.achievements > .subheadline > a {
     font-size: 0 !important;
     display: flex !important;
     justify-content: center !important;
@@ -158,8 +152,7 @@ header.head h1 { color: #ff1493 !important; }
     color: transparent !important;
 }
 .profile-content .subheadline > a[href$="/favorites"]::after,
-.achievements > .subheadline > a::after,
-.profile-head .c-history .subheadline > a::after {
+.achievements > .subheadline > a::after {
     font-size: 14px !important;
     font-weight: 700 !important;
     color: #0a0a0a !important;
@@ -172,7 +165,6 @@ header.head h1 { color: #ff1493 !important; }
 }
 .profile-content .subheadline > a[href$="/favorites"]::after { content: "ЛЮБИМОЕ АНИМЕ" !important; }
 .achievements > .subheadline > a::after { content: "ДОСТИЖЕНИЯ" !important; }
-.profile-head .c-history .subheadline > a::after { content: "ИСТОРИЯ" !important; }
 
 /* ============================================
    "КОРЕША" И "ТУСОВКИ"
@@ -216,7 +208,6 @@ body#profiles_friends .subheadline::after { content: "КОРЕША" !important; 
 body#profiles_show .cc-2a .c-column:nth-child(2) .subheadline::after,
 body#profiles_clubs .subheadline::after { content: "ТУСОВКИ" !important; }
 
-/* Кликабельность Тусовок */
 body#profiles_show .cc-2a .c-column:nth-child(2) .subheadline > a,
 body#profiles_clubs .subheadline > a {
     position: absolute !important;
@@ -232,7 +223,7 @@ body#profiles_clubs .subheadline > a {
 }
 
 /* ============================================
-   АВАТАРКИ (ВСЕ КЛУБЫ ПОКАЗЫВАЮТСЯ)
+   АВАТАРКИ
    ============================================ */
 .cc-friends, .b-clubs {
     display: flex !important;
@@ -383,59 +374,45 @@ header.head h1 { color: #ff1493 !important; text-shadow: 2px 2px 5px #ff69b4; }
 ::selection { background: #ff1493; color: white; }
 .b-db_entry, .p-profiles, .b-comments, .b-message, .b-topic, .b-menu, .b-block, .b-catalog_entry, .l-menu, .b-footer, .l-footer, .b-form, .b-input { background-color: transparent !important; color: #ffb6c1; }
 .p-profiles .profile-head .c-brief header .notice { color: #ff69b4; text-shadow: 1px 1px 3px #ff69b4; }
-.p-profiles .profile-head .c-history .entry .title { color: #ff69b4; }
 .p-profiles .profile-head .c-history .entry .misc, .p-profiles .profile-head .c-history .entry .misc.date { color: #ffb6c1 !important; }
 .b-tooltipped:not(a) { color: #ffb6c1; }
 .b-nothing_here { color: #ff1493; }
 
 /* ============================================
-   МОБИЛЬНАЯ ВЕРСИЯ: КОМПАКТНАЯ ИСТОРИЯ + ФОН ПОД АВАТАРКОЙ
+   МОБИЛЬНАЯ ВЕРСИЯ: КОМПАКТНАЯ ИСТОРИЯ С ФОНОМ
    ============================================ */
 @media (max-width: 1023px) {
 
-    /* Фон-шапка под аватаркой, отделяющий историю */
-    .p-profiles .profile-head {
-        background-image: var(--header-bg-image) !important;
-        background-size: cover !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
-        background-color: var(--header-bg-color) !important;
-        border-radius: 0 0 20px 20px !important;
-        padding-bottom: 15px !important;
-    }
-
-    /* Показываем блок истории */
     .p-profiles .profile-head .c-history,
     .p-profiles .profile-head .c-history.x2,
     .p-profiles .profile-head .c-history.x3 {
+        background-image: linear-gradient(var(--header-bg-overlay), var(--header-bg-overlay)), var(--header-bg-image) !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        border-radius: 15px !important;
+        padding: 12px !important;
+        margin: 0 0 15px 0 !important;
         display: block !important;
         position: relative !important;
         width: 100% !important;
         max-width: 100% !important;
-        margin: 10px 0 0 0 !important;
-        padding: 0 !important;
         top: auto !important;
         right: auto !important;
         left: auto !important;
         transform: none !important;
         z-index: auto !important;
-        background: transparent !important;
-        border-radius: 0 !important;
+        box-shadow: 0 0 15px rgba(255, 20, 147, 0.3) !important;
     }
 
-    /* Скрываем только дубликат (если он есть) */
-    .p-profiles .profile-head .c-history > .subheadline:nth-child(2) {
-        display: none !important;
-    }
-
-    /* Заголовок «История» — одна плашка */
-    .p-profiles .subheadline.m13 {
+    .p-profiles .profile-head .c-history .subheadline,
+    .p-profiles .profile-head .c-history .subheadline.m13 {
         display: flex !important;
         position: relative !important;
         width: 100% !important;
         left: auto !important;
         top: auto !important;
-        margin: 0 0 8px 0 !important;
+        margin: 0 0 10px 0 !important;
         border: none !important;
         background: #ff1493 !important;
         border-radius: 10px 70px 10px 70px !important;
@@ -444,51 +421,38 @@ header.head h1 { color: #ff1493 !important; text-shadow: 2px 2px 5px #ff69b4; }
         justify-content: center !important;
         align-items: center !important;
         font-size: 0 !important;
-        text-indent: 0 !important;
+        box-sizing: border-box !important;
     }
 
-    /* Скрываем оригинальный текст ссылки «История», чтобы не было дубликата */
-    .p-profiles .subheadline.m13 > a {
-        font-size: 0 !important;
-        color: transparent !important;
-        display: block !important;
-        width: 100% !important;
-        text-align: center !important;
-    }
-
-    /* Подставляем один единственный текст «ИСТОРИЯ» */
-    .p-profiles .subheadline.m13 > a::after {
-        content: "ИСТОРИЯ" !important;
+    .p-profiles .profile-head .c-history .subheadline a {
         font-size: 14px !important;
         font-weight: 700 !important;
         color: #0a0a0a !important;
-        display: inline-block !important;
         font-family: 'Caveat', cursive !important;
+        text-align: center !important;
+        text-decoration: none !important;
+        display: block !important;
+        width: 100% !important;
         line-height: 1.2 !important;
     }
 
-    /* Показываем ТОЛЬКО ПЕРВУЮ запись истории */
     .p-profiles .profile-head .c-history .entry {
+        display: none !important;
+    }
+    .p-profiles .profile-head .c-history .entry:nth-child(1) {
         display: block !important;
         position: relative !important;
         width: 100% !important;
-        min-width: 100% !important;
         margin: 0 !important;
         padding: 8px 10px !important;
         animation: none !important;
-        background: rgba(255, 20, 147, 0.15) !important;
+        background: rgba(0, 0, 0, 0.5) !important;
         border-radius: 10px !important;
         box-shadow: none !important;
         float: none !important;
-        clear: both !important;
+        box-sizing: border-box !important;
     }
 
-    /* Скрываем 2-ю и последующие записи */
-    .p-profiles .profile-head .c-history .entry:nth-child(n+2) {
-        display: none !important;
-    }
-
-    /* Убираем бегущую строку */
     .p-profiles .profile-head .c-history .entry .misc {
         animation: none !important;
         display: block !important;
@@ -497,22 +461,12 @@ header.head h1 { color: #ff1493 !important; text-shadow: 2px 2px 5px #ff69b4; }
         width: auto !important;
         font-size: 12px !important;
     }
-
-    .p-profiles .profile-head .c-history .entry .misc.date.unprocessed {
-        display: block !important;
-        width: auto !important;
-        text-align: left !important;
-    }
-
-    /* Заголовок записи */
     .p-profiles .profile-head .c-history .entry .title {
         font-size: 13px !important;
         color: #ff69b4 !important;
-        animation: none !important;
         text-align: left !important;
+        animation: none !important;
     }
-
-    /* Картинка записи */
     .p-profiles .profile-head .c-history .entry img {
         max-height: 50px !important;
         max-width: 34px !important;
@@ -520,4 +474,4 @@ header.head h1 { color: #ff1493 !important; text-shadow: 2px 2px 5px #ff69b4; }
         float: left !important;
         margin: 0 8px 0 0 !important;
     }
-}
+   }
